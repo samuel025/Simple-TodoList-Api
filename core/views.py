@@ -32,3 +32,9 @@ def UpdateView(request, pk):
     if serializer.is_valid():
         serializer.save()
     return Response(serializer.data)
+
+@api_view(['DELETE'])
+def DeleteView(request, pk):
+    tasks = Task.objects.get(pk=pk)
+    tasks.delete()
+    return Response('Deleted Successfully')
