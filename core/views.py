@@ -24,3 +24,11 @@ def CreateView(request):
     if serializer.is_valid():
         serializer.save()
     return Response(serializer.data)
+
+@api_view(['POST'])
+def UpdateView(request, pk):
+    tasks = Task.objects.get(pk=pk)
+    serializer = TaskSerializer(data=request.data, instance=tasks)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
