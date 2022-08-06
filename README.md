@@ -2,8 +2,15 @@
 Just a simple todo list api with django rest framework
 
 # Running the project:
-    To run the project, go to the root directory of the project and run
-### `pip install -r requirements.txt`
+## Installing requirements
+    To run the project, go to the root directory of the project and run 
+    pip install -r requirements.txt
+
+## Starting Local Server
+    To start the local server, run
+    python manage.py runserver
+    It should start running on port 8000
+
 
 <!-- ## Available Scripts
 ##  For Backend
